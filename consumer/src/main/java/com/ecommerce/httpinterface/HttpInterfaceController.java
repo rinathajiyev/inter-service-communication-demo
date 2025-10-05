@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class HttpInterfaceController {
 
-    private final HttpInterfaceConfig httpInterfaceConfig;
+    private final ProviderHttpInterface providerHttpInterface;
 
     @GetMapping("/instance")
     public String getInstance() {
-        ProviderHttpInterface providerHttpInterface = httpInterfaceConfig.getClientHttpInterface();
         return providerHttpInterface.getInstanceInfo();
     }
 }

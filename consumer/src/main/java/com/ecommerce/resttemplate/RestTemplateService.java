@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateService {
 
     private final RestTemplate restTemplate;
-    private static final String INSTANCE_URL = "http://localhost:8081";
+    private static final String INSTANCE_URL = "http://PRODUCER";
 
     public String getInstance(){
         return restTemplate.getForObject(INSTANCE_URL + "/instance-info", String.class);
